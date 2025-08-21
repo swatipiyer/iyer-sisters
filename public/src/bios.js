@@ -1,6 +1,47 @@
-const bioGrid=document.getElementById('bioGrid');const bioSearch=document.getElementById('bioSearch');
-const bios=[{title:'Swati Iyer',body:'Swati, the shorter one, loves food, sleep, and stress! You can catch her panicking or at peace any time of day.',tags:['caring','focused','grounded'],cls:'swati'},{title:'Malini Iyer',body:'Malini is always open for a hug or a spontaneous plan. She is a vidwan and, in her free time, educates a donkey.',tags:['energetic','musical','warm'],cls:'malini'},{title:'Together — The Iyer Sisters',body:'Together Swati and Malini bring a spark to everyone’s life. No matter how thin they are, they always find a reason to diet and exercise. Through many ups and downs they overcome the opinions of many and SHINE!',tags:['sisters','fun','support'],cls:'together'}];
-function paintBios(filter=''){const list=bios.filter(b=>(b.title+' '+b.body+' '+b.tags.join(',')).toLowerCase().includes(filter.toLowerCase()));bioGrid.innerHTML=list.map(b=>`<article class="bio ${b.cls}"><h3>${b.title}</h3><div>${b.tags.map(t=>`<span class="tag">#${t}</span>`).join(' ')}</div><p>${b.body}</p></article>`).join('')}
+const bioGrid = document.getElementById('bioGrid');
+const bioSearch = document.getElementById('bioSearch');
+
+const bios = [
+    {
+        title: 'Swati Iyer',
+        body: 'Swati, the shorter one, loves food, sleep, and stress! You can catch her panicking or at peace any time of day.',
+        tags: ['caring'],
+        cls: 'swati'
+    },
+    {
+        title: 'Malini Iyer',
+        body: 'Malini is always open for a hug or a spontaneous plan. She is a vidwan and, in her free time, educates a donkey.',
+        tags: ['warm'],
+        cls: 'malini'
+    },
+    {
+        title: 'Together — The Iyer Sisters',
+        body: 'Together Swati and Malini bring a spark to everyone’s life. No matter how thin they are, they always find a reason to diet and exercise. Through many ups and downs they overcome the opinions of many and SHINE!',
+        tags: ['sisters', 'fun'],
+        cls: 'together'
+    }
+];
+
+function paintBios(filter = '') {
+    const list = bios.filter(b =>
+        (b.title + ' ' + b.body + ' ' + b.tags.join(',')).toLowerCase().includes(filter.toLowerCase())
+    );
+    bioGrid.innerHTML = list.map(b =>
+        `<article class="bio ${b.cls}">
+            <h3>${b.title}</h3>
+            <div>${b.tags.map(t => `<span class="tag">#${t}</span>`).join(' ')}</div>
+            <p>${b.body}</p>
+        </article>`
+    ).join('');
+}
+
 paintBios();
-bioSearch.addEventListener('input',e=>paintBios(e.target.value));
-document.addEventListener('keydown',e=>{if(e.key==='/'){e.preventDefault();bioSearch.focus()}})
+
+bioSearch.addEventListener('input', e => paintBios(e.target.value));
+
+document.addEventListener('keydown', e => {
+    if (e.key === '/') {
+        e.preventDefault();
+        bioSearch.focus();
+    }
+});

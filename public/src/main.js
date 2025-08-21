@@ -1,1 +1,1 @@
-console.log('Iyer Sisters site loaded ✅');
+console.log('Iyer Sisters site loaded');
