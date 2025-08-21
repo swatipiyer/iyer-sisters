@@ -1,7 +1,5 @@
-# Iyer Sisters — Beginner Web Project
+# Iyer Sisters 
 
-A tiny site with a quiz, bios, a falling-food game (“Feed the Iyer Sisters”), and a services list.
-Built with vanilla HTML/CSS/JS so it’s easy to understand.
 
 ## Run locally
 1. `npm install`
