@@ -1,0 +1,11 @@
+{
+  "name": "iyer-sisters",
+  "version": "1.0.0",
+  "description": "Beginner-friendly website for the Iyer Sisters: quiz, bios, a falling-food game, and services.",
+  "scripts": {
+    "start": "live-server public --port=5173 --open=./index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

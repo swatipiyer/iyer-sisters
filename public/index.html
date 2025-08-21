@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iyer Sisters — est. 2023</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    🏃‍♀️ Join the Iyer Sisters for a 5k run @
+    <a href="https://runsignup.com/Race/CA/Sunnyvale/ICCSevathon" target="_blank" rel="noopener">Sevathon</a>!
+  </div>
+
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img class="logo" src="./images/logo.png" alt="Iyer Sisters Logo" />
+        <div>Iyer Sisters <span class="est">est. 2023</span></div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#bios">Bios</a>
+        <a href="#game">Game</a>
+        <a href="#services">Services</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="section card">
+      <span class="pill">keep calm and let iyer handle it</span>
+      <h1>welcome to the world of the iyer sisters</h1>
+      <p class="tiny">learn more about us, the difference we make, and join us!</p>
+      <div class="btn-row">
+        <a href="#quiz" class="btn primary">Start the Quiz ▶</a>
+        <a href="#game" class="btn">Play the Game 🎮</a>
+      </div>
+    </section>
+
+    <section id="quiz" class="section card">
+      <h2>Quiz • How well do you know the Iyer Sisters?</h2>
+      <p class="tiny">score 4/5 to win!</p>
+      <form id="quizForm" class="mt"></form>
+      <div class="btn-row">
+        <button class="btn primary" id="submitQuiz" type="button">Submit</button>
+        <button class="btn" id="resetQuiz" type="button">Reset</button>
+        <span class="stat">Score: <b id="score">0</b>/5</span>
+      </div>
+      <div id="quizResult" class="mt"></div>
+    </section>
+
+    <section id="bios" class="section card">
+      <h2>Meet the Iyer Sisters</h2>
+      <input id="bioSearch" class="search" placeholder="Search bios… (e.g., music, calm, sisters)"/>
+      <div class="bio-grid mt" id="bioGrid"></div>
+    </section>
+
+    <section id="game" class="section card">
+      <h2>Game • Feed the Iyer Sisters</h2>
+      <div class="game-wrap">
+        <div class="game-panel">
+          <div class="stat">⏱️ Time: <b id="gTime">30</b>s</div>
+          <div class="stat">⭐ Score: <b id="gScore">0</b></div>
+          <div class="stat">🏆 Best: <b id="gBest">—</b></div>
+          <div class="btn-row">
+            <button class="btn primary" id="gStart">Start</button>
+            <button class="btn" id="gReset">Reset</button>
+          </div>
+          <p class="tiny">Move with ◀ ▶ (or A/D). Catch food, avoid rocks.</p>
+        </div>
+        <canvas id="feedCanvas" width="520" height="300" aria-label="Feed the Iyer Sisters"></canvas>
+      </div>
+      <div id="gMsg" class="mt tiny"></div>
+    </section>
+
+    <section id="services" class="section card">
+      <h2>Services</h2>
+      <p class="tiny">Click a service to save your interest — stored only on this device.</p>
+      <div id="svcGrid" class="svc-grid mt"></div>
+      <div class="btn-row">
+        <button class="btn" id="viewRequests">View Selected</button>
+        <button class="btn" id="clearRequests">Clear</button>
+      </div>
+      <div id="svcOutput" class="mt tiny"></div>
+    </section>
+
+    <footer class="footer">
+      Made with ☕ & 🎶 by the Iyer Sisters • ideated by <b>sri pranav the donkey</b> 🫏
+    </footer>
+  </main>
+
+  <script src="./src/quiz.js"></script>
+  <script src="./src/bios.js"></script>
+  <script src="./src/game.js"></script>
+  <script src="./src/services.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
