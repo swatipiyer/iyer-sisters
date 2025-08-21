@@ -35,9 +35,10 @@
       <p class="tiny">learn more about us, the difference we make, and join us!</p>
       <div class="btn-row">
         <a href="#quiz" class="btn primary">Start the Quiz ▶</a>
-        <a href="#game" class="btn">Play the Game 🎮</a>
+        <a href="#game" class="btn" id="gStart">Play FEED THE FATTIES 🎮</a>
       </div>
     </section>
+
 
     <section id="quiz" class="section card">
       <h2>Quiz • How well do you know the Iyer Sisters?</h2>
@@ -57,24 +58,6 @@
       <div class="bio-grid mt" id="bioGrid"></div>
     </section>
 
-    <section id="game" class="section card">
-      <h2>Game • Feed the Iyer Sisters</h2>
-      <div class="game-wrap">
-        <div class="game-panel">
-          <div class="stat">⏱️ Time: <b id="gTime">30</b>s</div>
-          <div class="stat">⭐ Score: <b id="gScore">0</b></div>
-          <div class="stat">🏆 Best: <b id="gBest">—</b></div>
-          <div class="btn-row">
-            <button class="btn primary" id="gStart">Start</button>
-            <button class="btn" id="gReset">Reset</button>
-          </div>
-          <p class="tiny">Move with ◀ ▶ (or A/D). Catch food, avoid rocks.</p>
-        </div>
-        <canvas id="feedCanvas" width="520" height="300" aria-label="Feed the Iyer Sisters"></canvas>
-      </div>
-      <div id="gMsg" class="mt tiny"></div>
-    </section>
-
     <section id="services" class="section card">
       <h2>Services</h2>
       <p class="tiny">Click a service to save your interest — stored only on this device.</p>
@@ -91,6 +74,7 @@
     </footer>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   <script src="./src/quiz.js"></script>
   <script src="./src/bios.js"></script>
   <script src="./src/game.js"></script>
